@@ -7,4 +7,6 @@ interface SuperheroService {
 
     fun findAll(pageable: Pageable): Page<Superhero>;
 
+    fun findById(idSuperhero: Long): Superhero
+
 }

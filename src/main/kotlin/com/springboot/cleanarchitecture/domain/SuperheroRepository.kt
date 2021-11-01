@@ -7,4 +7,6 @@ interface SuperheroRepository<T, U> {
 
     fun findAll(pageable: Pageable): Page<T>;
 
+    fun findById(idSuperhero: U): T;
+
 }

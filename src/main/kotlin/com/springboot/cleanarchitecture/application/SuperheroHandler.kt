@@ -12,4 +12,8 @@ class SuperheroHandler(private var superheroServiceAdapter: SuperheroServiceAdap
         return superheroServiceAdapter.findAll(pageable);
     }
 
+    fun findById(idSuperhero: Long): Superhero {
+        return superheroServiceAdapter.findById(idSuperhero);
+    }
+
 }

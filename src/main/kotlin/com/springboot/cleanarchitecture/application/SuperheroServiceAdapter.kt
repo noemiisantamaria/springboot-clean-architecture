@@ -12,4 +12,8 @@ class SuperheroServiceAdapter(private var superheroService: SuperheroService) {
     fun findAll(pageable: Pageable) : Page<Superhero> {
         return superheroService.findAll(pageable);
     }
+
+    fun findById(idSuperhero: Long): Superhero {
+        return superheroService.findById(idSuperhero);
+    }
 }
