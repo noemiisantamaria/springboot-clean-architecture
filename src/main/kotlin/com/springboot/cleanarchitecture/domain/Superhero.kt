@@ -9,11 +9,6 @@ class Superhero(
     var thumbnail: String? = null
 ) {
 
-//    var id: Long = 1L;
-//    var name: String = "";
-//    var description: String? = null;
-//    var thumbnail: String? = null;
-
     fun toModel(domain: Superhero): SuperheroEntity {
         return SuperheroEntity(domain.id, domain.name, domain.description, domain.thumbnail);
     }

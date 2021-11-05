@@ -1,5 +1,6 @@
-package com.springboot.cleanarchitecture.application
+package com.springboot.cleanarchitecture.api
 
+import com.springboot.cleanarchitecture.application.SuperheroHandler
 import com.springboot.cleanarchitecture.domain.Superhero
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
