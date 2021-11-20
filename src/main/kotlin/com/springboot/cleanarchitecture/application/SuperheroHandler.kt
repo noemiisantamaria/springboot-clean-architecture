@@ -12,7 +12,11 @@ class SuperheroHandler {
     @Autowired
     lateinit var superheroServiceAdapter: SuperheroServiceAdapter
 
-    fun findAll(pageable: Pageable) : Page<Superhero> {
+    fun add(superhero: Superhero): Superhero {
+        return superheroServiceAdapter.add(superhero);
+    }
+
+    fun findAll(pageable: Pageable): Page<Superhero> {
         return superheroServiceAdapter.findAll(pageable);
     }
 

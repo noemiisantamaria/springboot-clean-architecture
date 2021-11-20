@@ -5,6 +5,8 @@ import org.springframework.data.domain.Pageable
 
 interface SuperheroRepository<T, U> {
 
+    fun add(superhero: T): T;
+
     fun findAll(pageable: Pageable): Page<T>;
 
     fun findById(idSuperhero: U): T;

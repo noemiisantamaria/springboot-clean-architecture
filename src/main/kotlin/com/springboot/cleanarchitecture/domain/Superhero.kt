@@ -9,12 +9,12 @@ class Superhero(
     var thumbnail: String? = null
 ) {
 
-    fun toModel(domain: Superhero): SuperheroEntity {
-        return SuperheroEntity(domain.id, domain.name, domain.description, domain.thumbnail);
-    }
+}
 
-    fun fromModel(entity: SuperheroEntity): Superhero {
-        return Superhero(entity.id, entity.name, entity.description, entity.thumbnail);
-    }
+fun toModel(domain: Superhero): SuperheroEntity {
+    return SuperheroEntity(domain.id, domain.name, domain.description, domain.thumbnail);
+}
 
+fun fromModel(entity: SuperheroEntity): Superhero {
+    return Superhero(entity.id, entity.name, entity.description, entity.thumbnail);
 }

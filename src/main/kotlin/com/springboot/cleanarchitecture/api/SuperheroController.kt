@@ -5,15 +5,18 @@ import com.springboot.cleanarchitecture.domain.Superhero
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 class SuperheroController {
 
     @Autowired
     lateinit var superheroHandler: SuperheroHandler
+
+    @PostMapping("/superhero")
+    fun addSuperhero(@RequestBody superhero: Superhero): Superhero {
+        return superheroHandler.add(superhero);
+    }
 
     @GetMapping("/superheroes")
     fun findAllSuperheroes(pageable: Pageable): Page<Superhero> {
