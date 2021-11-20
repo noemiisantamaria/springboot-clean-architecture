@@ -15,17 +15,22 @@ class SuperheroController {
 
     @PostMapping("/superhero")
     fun addSuperhero(@RequestBody superhero: Superhero): Superhero {
-        return superheroHandler.add(superhero);
+        return superheroHandler.add(superhero)
+    }
+
+    @DeleteMapping("/superhero/{idSuperhero}")
+    fun deleteSuperhero(@PathVariable idSuperhero: Long) {
+        superheroHandler.delete(idSuperhero)
     }
 
     @GetMapping("/superheroes")
     fun findAllSuperheroes(pageable: Pageable): Page<Superhero> {
-        return superheroHandler.findAll(pageable);
+        return superheroHandler.findAll(pageable)
     }
 
     @GetMapping("/superhero/{idSuperhero}")
     fun findSuperheroById(@PathVariable idSuperhero: Long): Superhero {
-        return superheroHandler.findById(idSuperhero);
+        return superheroHandler.findById(idSuperhero)
     }
 
 }

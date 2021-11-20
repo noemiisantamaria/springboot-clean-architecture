@@ -18,6 +18,10 @@ class SuperheroRepositoryAdapter : SuperheroRepository<Superhero, Long> {
         return fromEntity(superheroJpaRepository.save(toEntity(superhero)))
     }
 
+    override fun delete(idSuperhero: Long) {
+        superheroJpaRepository.deleteById(idSuperhero)
+    }
+
     override fun findAll(pageable: Pageable): Page<Superhero> {
         return superheroJpaRepository.findAll(pageable).map { fromEntity(it) }
     }

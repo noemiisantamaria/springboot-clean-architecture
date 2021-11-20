@@ -14,14 +14,18 @@ class SuperheroServiceAdapter {
     lateinit var superheroService: SuperheroService
 
     fun add(superhero: Superhero): Superhero {
-        return superheroService.add(superhero);
+        return superheroService.add(superhero)
+    }
+
+    fun delete(idSuperhero: Long) {
+        superheroService.delete(idSuperhero)
     }
 
     fun findAll(pageable: Pageable): Page<Superhero> {
-        return superheroService.findAll(pageable);
+        return superheroService.findAll(pageable)
     }
 
     fun findById(idSuperhero: Long): Superhero {
-        return superheroService.findById(idSuperhero);
+        return superheroService.findById(idSuperhero)
     }
 }

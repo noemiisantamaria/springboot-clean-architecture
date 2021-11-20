@@ -15,12 +15,16 @@ class SuperheroServiceImpl : SuperheroService {
         return superheroRepository.add(superhero)
     }
 
+    override fun delete(idSuperhero: Long) {
+        superheroRepository.delete(idSuperhero)
+    }
+
     override fun findAll(pageable: Pageable): Page<Superhero> {
-        return superheroRepository.findAll(pageable);
+        return superheroRepository.findAll(pageable)
     }
 
     override fun findById(idSuperhero: Long): Superhero {
-        return superheroRepository.findById(idSuperhero);
+        return superheroRepository.findById(idSuperhero)
     }
 
 }
